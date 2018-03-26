@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { GitsearchService } from './services/gitsearch.service';
 
 
@@ -16,7 +17,8 @@ import { GitsearchComponent } from './components/gitsearch/gitsearch.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [GitsearchService],
   bootstrap: [AppComponent]
