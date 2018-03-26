@@ -16,7 +16,8 @@ export class GitsearchService {
 
   }
   getProfileDesc(){
-    return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
+    return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+    .map(res => res.json());
   }
 
 }
