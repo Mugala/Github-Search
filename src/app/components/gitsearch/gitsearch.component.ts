@@ -8,13 +8,17 @@ import { GitsearchService } from '../../services/gitsearch.service';
 })
 export class GitsearchComponent implements OnInit {
     profile: any[];
-    
+    repos: any[];
 
   constructor(private gitsearchService: GitsearchService) {
     this.gitsearchService.getProfileDesc().subscribe(profile =>{
       console.log(profile);
       this.profile = profile;
     });
+    this.gitsearchService.getProfileRepos().subscribe(repos =>{
+      console.log(repos);
+      this.repos = repos;
+    })
    }
 
   ngOnInit() {
