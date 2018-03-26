@@ -12,11 +12,11 @@ import { GitsearchComponent } from './components/gitsearch/gitsearch.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GitsearchComponent,
-    HttpModule
+    GitsearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [GitsearchService],
   bootstrap: [AppComponent]
